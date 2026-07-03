@@ -60,7 +60,7 @@ def run_deterministic_sieve_study(limit):
     print(f"   [Data Generation] Total Primes Extracted: {total_primes_found:,}")
     
     if len(all_t_values) < 6:
-        print("❌ Not enough primes generated to form a 6-bit block.")
+        print("❌ Analytical Failure: Insufficient prime variables to populate a 6-bit block topology.")
         return
 
     # Phase 2: Evaluation of frequency on the main sequence (Deterministic Order)
@@ -101,10 +101,10 @@ def run_deterministic_sieve_study(limit):
     print("\n" + "="*55)
     print(f"🎯 DETERMINISTIC SIEVE ORDER FREQUENCY : {f_main:.6f}%")
     print(f"🎲 STOCHASTIC SHUFFLING CONTROL BASELINE: {f_shuff:.6f}%")
-    print(f"📊 Total Evaluated 6-Bit Blocks        : {blocks_main}")
+    print(f"📊 Total Evaluated 6-Bit Blocks        : {blocks_main:,}")
     print(f"⏱️ TOTAL PROCESSING TIME               : {time.time() - start_time:.2f}s")
     print("="*55)
 
-# اجرای تست قطعی برای تمام اعداد اول زیر ۱۰ به توان ۸ برای راستی‌آزمایی اولیه سرعت
-# شما می‌توانید این عدد را برای محدوده نهایی خود بزرگتر کنید.
-run_deterministic_sieve_study(10**10)
+if __name__ == '__main__':
+    # Execution bound directly to the high-scale operational horizon specified in the manuscript
+    run_deterministic_sieve_study(10**10)
