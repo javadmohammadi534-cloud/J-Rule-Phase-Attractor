@@ -99,5 +99,5 @@ if __name__ == '__main__':
     # DATA INGESTION NOTE: Ensure the file contains one non-trivial zero per line
     # (e.g., Andrew Odlyzko's standard reference formats).
     # Modify the FILE_PATH to point to your local text dataset.
-    FILE_PATH = 'C:/Users/user/Documents/zero)100k.txt'
+    FILE_PATH = 'data/zeta_zeros_100k.txt'
     run_zeta_experiment(FILE_PATH)
