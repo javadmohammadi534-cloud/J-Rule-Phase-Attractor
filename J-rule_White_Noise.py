@@ -71,7 +71,7 @@ def generate_and_analyze(noise_name, num_samples):
 if __name__ == '__main__':
     # --- Stress-test configuration for baseline calibration ---
     NUM_RUNS = 30          # Independent iterations per noise topology
-    NUM_SAMPLES = 10000000   # 10M samples per iteration
+    NUM_SAMPLES = 20000000   # 20M samples per iteration
     
     noise_types = [
         'Gaussian', 'Uniform', 'Laplace', 'Exponential-centered', 
